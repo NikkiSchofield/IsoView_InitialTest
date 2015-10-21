@@ -5,7 +5,15 @@ module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     // Add options here
   });
+  app.import('bower_components/jquery-ui/jquery-ui.js');
+  app.import('bower_components/lodash/lodash.js');
 
+  app.import('bower_components/chartist/dist/chartist.js');
+  app.import('bower_components/chartist/dist/chartist.min.css');
+
+  app.import('bower_components/gridstack/dist/gridstack.js');
+  app.import('bower_components/gridstack/dist/gridstack.css');
+  app.import('bower_components/gridstack/dist/gridstack-extra.min.css');
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //
