@@ -15,6 +15,10 @@
             <p> Google trends search terms</p>
             {{input type="text" value=term1 placeholder="Term 1"}}
             {{input type="text" value=term2 placeholder="Term 2"}}
+            {{view "select"  content=timespanGoogleTrends
+                             optionValuePath="content.value"
+                             optionLabelPath="content.name"
+                             value=currentTimeSpan.value}}
             <br/>
           </div>
   </div>
