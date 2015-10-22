@@ -1,12 +1,5 @@
 <h2 id="title">Welcome to Ember</h2>
 
-<p> Google trends search terms</p>
-{{input type="text" value=searchOne size="50"}}
-{{input type="text" value=searchTwo size="50"}}
-<p><button {{action "select"}}>✓Compare</button></p>
-
-<br/>
-
 <div class="grid-stack">
     <div class="grid-stack-item"
         data-gs-x="0" data-gs-y="0"
@@ -17,22 +10,6 @@
     </div>
 
 
-
-    <div class="grid-stack-item"
-        data-gs-x="0" data-gs-y="0"
-        data-gs-width="4" data-gs-height="2">
-            <div class="grid-stack-item-content">
-              <iframe id = "iframeNik" scrolling="no" style="border:dashed;"  src="http://www.google.com/trends/fetchComponent?hl=en-GB&q=sky+sports&date=1/2015+12m&gprop=froogle&cmpt=q&tz=Etc/GMT-1&tz=Etc/GMT-1&content=1&cid=TIMESERIES_GRAPH_0&export=5&w=500&h=330" wmode="Opaque"></iframe>
-            </div>
-    </div>
-
-    <div class="grid-stack-item"
-        data-gs-x="0" data-gs-y="0"
-        data-gs-width="4" data-gs-height="2">
-            <div class="grid-stack-item-content">
-              <iframe id = "iframe" scrolling="no" style="border:dashed;"  src="http://www.google.com/trends/fetchComponent?hl=en-GB&q=sky+sports,+football&date=1/2015+12m&gprop=froogle&cmpt=q&tz=Etc/GMT-1&tz=Etc/GMT-1&content=1&cid=TIMESERIES_GRAPH_0&export=5&w=500&h=330" wmode="Opaque"></iframe>
-            </div>
-    </div>
 
       {{outlet}}
 </div>

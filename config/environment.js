@@ -13,7 +13,7 @@ module.exports = function(environment) {
       'connect-src': "'self' http://api.chartbeat.com",
       'img-src': "'self' www.facebook.com p.typekit.net",
       'style-src': "'self' 'unsafe-inline' use.typekit.net",
-      'frame-src': "s-static.ak.facebook.com static.ak.facebook.com www.facebook.com"
+      'frame-src': "s-static.ak.facebook.com static.ak.facebook.com www.facebook.com www.google.com"
     },
     EmberENV: {
       FEATURES: {
