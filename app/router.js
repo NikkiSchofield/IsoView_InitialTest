@@ -7,6 +7,7 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('charts', {});
+  this.route('googleTrends', {});
 });
 
 export default Router;

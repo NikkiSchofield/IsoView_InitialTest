@@ -1,0 +1,57 @@
+
+<div class="grid-stack-item"
+    data-gs-x="0" data-gs-y="0"
+    data-gs-width="4" data-gs-height="2">
+        <div class="grid-stack-item-content">
+            <p> Google Trends search terms</p>
+            {{input type="text" value=term1 placeholder="Term 1"}}
+            {{input type="text" value=term2 placeholder="Term 2"}}
+            {{view "select"  content=timespanGoogleTrends
+                             optionValuePath="content.value"
+                             optionLabelPath="content.name"
+                             value=currentTimeSpan.value}}
+            <br/>
+            <iframe class="iframe" id = "iframeNik2" scrolling="no" style="border:dashed;"  src={{skySportsGoogleTrendsURL}} wmode="Opaque"></iframe>
+        </div>
+</div>
+
+<div class="grid-stack-item"
+    data-gs-x="0" data-gs-y="0"
+    data-gs-width="4" data-gs-height="2">
+        <div class="grid-stack-item-content">
+            {{input type="text" value=term1CB placeholder="Term 1"}}
+            {{input type="text" value=term2CB placeholder="Term 2"}}
+            {{input type="text" value=term3CB placeholder="Term 3"}}
+            {{input type="text" value=term4CB placeholder="Term 4"}}
+            {{input type="text" value=term5CB placeholder="Term 5"}}
+            {{view "select"  content=timespanGoogleTrends
+                             optionValuePath="content.value"
+                             optionLabelPath="content.name"
+                             value=googleTrendsCBTimespan.value}}
+
+            <iframe class="iframe" id = "iframeNik3" scrolling="no" style="border:dashed;"  src={{skySportsChartbeatTopPages}} wmode="Opaque"></iframe>
+        </div>
+</div>
+
+<div class="grid-stack-item"
+    data-gs-x="0" data-gs-y="0"
+    data-gs-width="4" data-gs-height="2">
+        <div class="grid-stack-item-content">
+              {{view "select"  content=model
+                           optionValuePath="model.title"
+                           optionLabelPath="model.title"
+                           value=googleTrendsCBTerm1.value}}
+
+              {{view "select"  content=timespanGoogleTrends
+                          optionValuePath="content.value"
+                          optionLabelPath="content.name"
+                          value=googleTrendsCBTerm1.value}}
+
+              {{view "select"  content=timespanGoogleTrends
+                           optionValuePath="content.value"
+                           optionLabelPath="content.name"
+                           value=googleTrendsCBTimespan2.value}}
+
+          <iframe class="iframe" id = "iframeNik4" scrolling="no" style="border:dashed;"  src={{skySportsChartbeatTopPagesDropDown}} wmode="Opaque"></iframe>
+        </div>
+</div>
