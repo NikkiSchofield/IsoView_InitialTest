@@ -21,10 +21,6 @@ export default Ember.Controller.extend({
       {name: "Past Hour",    value: "now%201-H"}
     ],
 
-    topPagesCB: [
-
-    ],
-
 
     currentTimeSpan: {
       value: ""
@@ -46,7 +42,7 @@ export default Ember.Controller.extend({
 
 
 
-    skySportsChartbeatTopPages: Ember.computed('model', 'term0CB', 'term1CB', 'term2CB', 'term3CB', 'term4CB', 'googleTrendsCBTimespan.value', function() {
+    skySportsChartbeatTopPages: Ember.computed('model', 'term1CB', 'term2CB', 'term3CB', 'term4CB', 'term5CB', 'googleTrendsCBTimespan.value', function() {
       var data = this.get('model'),
           timeSpan = this.get('googleTrendsCBTimespan.value');
 
@@ -83,12 +79,13 @@ export default Ember.Controller.extend({
 
 
 
-    skySportsChartbeatTopPagesDropDown: Ember.computed('googleTrendsCBTerm1.value', 'googleTrendsCBTerm2.value', 'currentTimeSpan.value', function() {
+    skySportsChartbeatTopPagesDropDown: Ember.computed('model', 'googleTrendsCBTerm1.value', 'googleTrendsCBTerm2.value', 'googleTrendsCBTimespan2.value', function() {
       var data = this.get('model'),
           term1 = this.get('googleTrendsCBTerm1.value'),
           term2 = this.get('googleTrendsCBTerm2.value'),
           timeSpan = this.get('googleTrendsCBTimespan2.value');
-          console.log(timeSpan);
+
+          console.log(term1);
 
 
           return 'http://www.google.com/trends/fetchComponent?hl=en-GB&q='+term1+',+'+term2+'&date='+timeSpan+'&cmpt=q&tz=Etc/GMT-1&tz=Etc/GMT-1&content=1&cid=TIMESERIES_GRAPH_0&export=5&w=500&h=330';

@@ -37,20 +37,20 @@
     data-gs-x="0" data-gs-y="0"
     data-gs-width="4" data-gs-height="2">
         <div class="grid-stack-item-content">
-              {{view "select"  content=model
-                           optionValuePath="model.title"
-                           optionLabelPath="model.title"
-                           value=googleTrendsCBTerm1.value}}
+                {{view "select"  content=model
+                                 optionValuePath="content.title"
+                                 optionLabelPath="content.title"
+                                 value=googleTrendsCBTerm1.value}}
 
-              {{view "select"  content=timespanGoogleTrends
-                          optionValuePath="content.value"
-                          optionLabelPath="content.name"
-                          value=googleTrendsCBTerm1.value}}
+                {{view "select" content=model
+                                optionValuePath="content.title"
+                                optionLabelPath="content.title"
+                                value=googleTrendsCBTerm2.value}}
 
-              {{view "select"  content=timespanGoogleTrends
-                           optionValuePath="content.value"
-                           optionLabelPath="content.name"
-                           value=googleTrendsCBTimespan2.value}}
+                {{view "select"  content=timespanGoogleTrends
+                                 optionValuePath="content.value"
+                                 optionLabelPath="content.name"
+                                 value=googleTrendsCBTimespan2.value}}
 
           <iframe class="iframe" id = "iframeNik4" scrolling="no" style="border:dashed;"  src={{skySportsChartbeatTopPagesDropDown}} wmode="Opaque"></iframe>
         </div>
