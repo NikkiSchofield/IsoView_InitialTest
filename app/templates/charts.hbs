@@ -1,10 +1,3 @@
-  <div class="grid-stack-item"
-      data-gs-x="0" data-gs-y="0"
-      data-gs-width="4" data-gs-height="2">
-          <div class="grid-stack-item-content">
-            <iframe class="iframe" id = "iframe" scrolling="no" style="border:dashed;"  src="http://www.google.com/trends/fetchComponent?hl=en-GB&q=sky+sports,+football&date=1/2015+12m&gprop=froogle&cmpt=q&tz=Etc/GMT-1&tz=Etc/GMT-1&content=1&cid=TIMESERIES_GRAPH_0&export=5&w=500&h=330" wmode="Opaque"></iframe>
-          </div>
-  </div>
 
 
 <div class="grid-stack-item"
@@ -30,7 +23,9 @@
     data-gs-x="0" data-gs-y="0"
     data-gs-width="2" data-gs-height="2">
         <div class="grid-stack-item-content">
-              <h3>Chartbeat Live Concurrent Users Different structure</h3>
-              <div class="issue-number">{{concurrentUsers}}</div>
+          <p> ChartBeat concurrent users </p>
+            {{input type="text" value=minYAxis placeholder="Minimum Y"}}
+            {{input type="text" value=maxYAxis placeholder="Maximum Y"}}
+              <div class="ct-chart ct-golden-section" id="concurrentCBChart">{{concurrentUsers}}</div>
         </div>
 </div>
