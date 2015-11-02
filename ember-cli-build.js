@@ -11,6 +11,8 @@ module.exports = function(defaults) {
   app.import('bower_components/chartist/dist/chartist.js');
   app.import('bower_components/chartist/dist/chartist.min.css');
 
+  app.import('bower_components/chartjs/Chart.js');
+
   app.import('bower_components/gridstack/dist/gridstack.js');
   app.import('bower_components/gridstack/dist/gridstack.css');
   app.import('bower_components/gridstack/dist/gridstack-extra.min.css');

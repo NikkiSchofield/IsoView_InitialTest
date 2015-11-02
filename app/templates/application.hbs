@@ -50,31 +50,6 @@ $(function () {
 
 $(document).ready(function(){
 
-      var chart = $('.ct-chart');
-
-      var toolTip = $('.ct-chart').append('<div class="tooltip"></div>')
-        .find('.tooltip')
-        .hide();
-
-
-      chart.on('mouseenter', '.ct-point', function() {
-        var point = $(this),
-          value = point.attr('ct:value'),
-          seriesName = point.parent().attr('ct:series-name');
-        toolTip.html(seriesName + '<br>' + value).show();
-      });
-
-      chart.on('mouseleave', '.ct-point', function() {
-        toolTip.hide();
-      });
-
-      chart.on('mousemove', function(event) {
-        toolTip.css({
-          left: (event.offsetX || event.originalEvent.layerX) - toolTip.width() / 2 - 10,
-          top: (event.offsetY || event.originalEvent.layerY) - toolTip.height() - 40
-        });
-      });
-
 
     var nikkiChart = new Chartist.Line('#chart2', {
       labels: [1, 2, 3, 4],

@@ -3,29 +3,36 @@
 <div class="grid-stack-item"
     data-gs-x="0" data-gs-y="0"
     data-gs-width="2" data-gs-height="2">
-        <div class="grid-stack-item-content">
-              <div class="ct-chart ct-golden-section" id="testChart"></div>
-        </div>
-</div>
-
-
-
-<div class="grid-stack-item"
-    data-gs-x="0" data-gs-y="0"
-    data-gs-width="2" data-gs-height="2">
-        <div class="grid-stack-item-content">
-              <h3>Chartbeat Live Concurrent Users</h3>
-              <div class="issue-number">{{model}}</div>
-        </div>
+    <div class="grid-stack-item-content">
+        <div class="ct-chart ct-golden-section" id="testChart"></div>
+    </div>
 </div>
 
 <div class="grid-stack-item"
     data-gs-x="0" data-gs-y="0"
     data-gs-width="2" data-gs-height="2">
-        <div class="grid-stack-item-content">
-          <p> ChartBeat concurrent users </p>
-            {{input type="text" value=minYAxis placeholder="Minimum Y"}}
-            {{input type="text" value=maxYAxis placeholder="Maximum Y"}}
-              <div class="ct-chart ct-golden-section" id="concurrentCBChart">{{concurrentUsers}}</div>
-        </div>
+    <div class="grid-stack-item-content">
+        <h3>Chartbeat Live Concurrent Users</h3>
+        <div class="issue-number">{{model}}</div>
+    </div>
+</div>
+
+<div class="grid-stack-item"
+    data-gs-x="0" data-gs-y="0"
+    data-gs-width="6" data-gs-height="6">
+    <div class="grid-stack-item-content">
+        <p> ChartBeat concurrent users </p>
+        {{input type="text" value=minYAxis placeholder="Minimum Y"}}
+        {{input type="text" value=maxYAxis placeholder="Maximum Y"}}
+        <div class="ct-chart ct-golden-section" id="concurrentCBChart">{{concurrentUsers}}</div>
+    </div>
+</div>
+
+<div class="grid-stack-item"
+    data-gs-x="0" data-gs-y="0"
+    data-gs-width="4" data-gs-height="4">
+    <div class="grid-stack-item-content">
+        <p> chart.js</p>
+        {{ember-chart type='Line' data=numberData legend=true height=200}}
+    </div>
 </div>
